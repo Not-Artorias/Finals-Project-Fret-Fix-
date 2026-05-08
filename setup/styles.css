@@ -1,0 +1,390 @@
+/* ===================================
+   1. RESET & BASE STYLES
+=================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #000;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===================================
+   2. NAVBAR / HEADER
+=================================== */
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+/* Logo Link */
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%; /* Full height of navbar */
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    height: 90px;
+    width: auto;
+    display: block;
+}
+
+/* Nav Icons Styling */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Icons */
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.search {
+    margin-left: 20px;
+}
+
+/* ===================================
+   3. SIDEBAR & TOOLS
+=================================== */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    padding-top: 50px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    padding: 5px 12px;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background-color: red;
+}
+
+/* Sidebar Social Media Section */
+.social-section {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.social-section h5 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: red;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Search Bar */
+.search-bar {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.4s ease-in-out;
+    z-index: 1100;
+    padding: 10px;
+}
+
+.search-bar.active {
+    top: 0;
+}
+
+.search-input {
+    width: 50%;
+    padding: 12px 45px 12px 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-btn-icon {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+.close-search {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* User Dropdown */
+.user-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 10%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+.user-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-dropdown button:hover {
+    background: red;
+}
+
+/* ===================================
+   4. MAIN CONTENT
+=================================== */
+
+/* Main Setup Section */
+.setup-container {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.file-upload {
+    width: 80%;
+    max-width: 500px;
+    height: 150px;
+    border: 2px dashed black;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.file-upload img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-group input {
+    width: 50%; /* Adjusted width so two inputs fit side by side */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Checkbox Styling */
+fieldset {
+    text-align: left;
+    border: none;
+    margin-top: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="text"]:last-child {
+    margin-left: 5px;
+    padding: 5px;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: red;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: darkred;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: gray;
+}
+
+.file-upload {
+    border: 2px dashed #aaa;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.file-upload img {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* for center shit */
+.setup-wrapper {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+    text-align: center;
+}
+
+.setup-wrapper p a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.setup-wrapper p a:hover {
+    text-decoration: underline;
+}
+

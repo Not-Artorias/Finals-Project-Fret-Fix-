@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fret & Fix</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <span class="icon search-btn" id="searchIcon">🔍</span>
+    <a href="../Homepage/Homepage.html" class="logo-link">
+      <img src="./Pictures/logo.png" alt="Fret & Fix Logo" class="logo"/>
+    </a>
+    <div class="nav-icons">
+      <a href="../cart/cart.html" class="icon" style="text-decoration: none;">🛒</a>
+      <span class="icon user-btn" id="userIcon">👤</span>
+      <span class="icon menu-btn">☰</span>
+    </div>
+  </nav>
+</header>
+
+<!-- User Dropdown -->
+<div class="user-dropdown" id="userDropdown">
+  <a href="../loginregister/login.html"><button class="login-btn">Login</button></a>
+  <a href="../loginregister/register.html"><button class="register-btn">Register</button></a>
+</div>
+
+<!-- Search Dropdown -->
+<div class="search-bar" id="searchBar">
+  <input type="text" class="search-input" placeholder="Search"/>
+  <i class="fas fa-search search-icon"></i>
+  <button class="close-search" id="closeSearch">&times;</button>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+  <span class="close-btn">&times;</span>
+  <ul>
+    <li><a href="..\Homepage\Homepage.html">Home</a></li>
+    <li><a href="..\Guitar shop\shop.html">Shop</a></li>
+    <li><a href="..\repair\repair.html">Repairs</a></li>
+    <li><a href="..\setup\setup.html">Upgrade</a></li>
+    <li><a href="..\Homepage\Homepage.html#about">About Us</a></li>
+    <li><a href="..\Homepage\Homepage.html#contact">Contact</a></li>
+    
+  </ul>
+
+  <div class="social-section">
+    <h5>FOLLOW US</h5>
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="fas fa-music"></i></a>
+  </div>
+</div>
+
+<!-- Guitar Options & Sort -->
+<div class="guitar-header">
+  <h2 class="guitar-options">Template</h2>
+  <div class="sort-container">
+    <label for="sort">Sort By:</label>
+    <select id="sort">
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="name">Name</option>
+    </select>
+  </div>
+</div>
+
+<!-- Guitar Shop Section -->
+<section class="guitar-container">
+  <div class="guitar-card">
+    <img src="Pictures/images.png" alt="Guitar Template"/>
+    <h2 class="guitar-name">Template Name</h2>
+    <p class="guitar-price">₱00,000.00</p>
+    <p class="guitar-description">Template description.</p>
+    <div class="guitar-buttons">
+      <a href="../cart/cart.html"><button class="btn red">Add to Cart</button></a>
+      <a href="../guitar details/index.html"><button class="btn black">More Details</button></a>
+    </div>
+  </div>
+  <div class="guitar-card">
+    <img src="Pictures/images.png" alt="Guitar Template"/>
+    <h2 class="guitar-name">Template Name</h2>
+    <p class="guitar-price">₱00,000.00</p>
+    <p class="guitar-description">Template description.</p>
+    <div class="guitar-buttons">
+      <a href="../cart/cart.html"><button class="btn red">Add to Cart</button></a>
+      <a href="../guitar details/index.html"><button class="btn black">More Details</button></a>
+    </div>
+  </div>
+  <div class="guitar-card">
+    <img src="Pictures/images.png" alt="Guitar Template"/>
+    <h2 class="guitar-name">Template Name</h2>
+    <p class="guitar-price">₱00,000.00</p>
+    <p class="guitar-description">Template description.</p>
+    <div class="guitar-buttons">
+      <a href="../cart/cart.html"><button class="btn red">Add to Cart</button></a>
+      <a href="../guitar details/index.html"><button class="btn black">More Details</button></a>
+    </div>
+  </div>
+  <div class="guitar-card">
+    <img src="Pictures/images.png" alt="Guitar Template"/>
+    <h2 class="guitar-name">Template Name</h2>
+    <p class="guitar-price">₱00,000.00</p>
+    <p class="guitar-description">Template description.</p>
+    <div class="guitar-buttons">
+      <a href="../cart/cart.html"><button class="btn red">Add to Cart</button></a>
+      <a href="../guitar details/index.html"><button class="btn black">More Details</button></a>
+    </div>
+  </div>
+  <div class="guitar-card">
+    <img src="Pictures/images.png" alt="Guitar Template"/>
+    <h2 class="guitar-name">Template Name</h2>
+    <p class="guitar-price">₱00,000.00</p>
+    <p class="guitar-description">Template description.</p>
+    <div class="guitar-buttons">
+      <a href="../cart/cart.html"><button class="btn red">Add to Cart</button></a>
+      <a href="../guitar details/index.html"><button class="btn black">More Details</button></a>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fret & Fix</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <span class="icon search-btn" id="searchIcon">🔍</span>
+    <a href="../Homepage/Homepage.html" class="logo-link">
+      <img src="./Pictures/logo.png" alt="Fret & Fix Logo" class="logo" />
+    </a>
+    <div class="nav-icons">
+      <a href="../cart/cart.html" class="icon">🛒</a>
+      <span class="icon user-btn" id="userIcon">👤</span>
+      <span class="icon menu-btn" id="menuBtn">☰</span>
+    </div>
+  </nav>
+</header>
+
+<!-- User Dropdown -->
+<div class="user-dropdown" id="userDropdown">
+  <a href="../loginregister/login.html"><button class="login-btn">Login</button></a>
+  <a href="../loginregister/register.html"><button class="register-btn">Register</button></a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-bar" id="searchBar">
+  <input type="text" class="search-input" placeholder="Search"/>
+  <i class="fas fa-search search-icon"></i>
+  <button class="close-search" id="closeSearch">&times;</button>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <ul>
+    <li><a href="../Homepage/Homepage.html">Home</a></li>
+    <li><a href="../Guitar shop/shop.html">Shop</a></li>
+    <li><a href="../repair/repair.html">Repairs</a></li>
+    <li><a href="../setup/setup.html">Upgrade</a></li>
+    <li><a href="../Homepage/Homepage.html#about">About Us</a></li>
+    <li><a href="../Homepage/Homepage.html#contact">Contact</a></li>
+  </ul>
+
+  <div class="social-section">
+    <h5>FOLLOW US</h5>
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="fas fa-music"></i></a>
+  </div>
+</div>
+
+<!-- File Upload Section -->
+<main class="setup-wrapper">
+  <div class="file-upload" id="fileUpload">
+    <label for="fileInput">
+      <img src="Pictures/upload.png" alt="Upload" id="uploadPreview" />
+      <p>Choose a file or drag it here *</p>
+    </label>
+    <input type="file" id="fileInput" accept="image/*" style="display: none;" required />
+  </div>
+
+  <form id="setupForm">
+    <div class="form-group">
+      <input type="text" placeholder="Full name *" required />
+      <input type="email" placeholder="Email *" required />
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Contact *" required />
+      <input type="text" placeholder="Address *" required />
+    </div>
+
+    <fieldset>
+      <legend>What setup/Upgrade service *</legend>
+      <label><input type="checkbox" /> Full Setup</label>
+      <label><input type="checkbox" /> Basic Setup</label>
+      <label><input type="checkbox" /> Other <input type="text" placeholder="Specify" /></label>
+    </fieldset>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+  <p class="footer-text">
+    Got questions? Need assistance? Feel free to reach out! Our team will get back to you within 2–3 business days.
+    Whether it's about guitar repairs, product inquiries, or custom work, we're here to help!
+  </p>
+
+  <p>Other Services <a href="../repair/repair.html">Repair</a></p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

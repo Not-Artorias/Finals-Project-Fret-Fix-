@@ -1,0 +1,446 @@
+/* ===================================
+   1. RESET & BASE STYLES
+=================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #000;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===================================
+   2. NAVBAR / HEADER
+=================================== */
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    height: 120px;
+    width: 100%;
+    position: relative;
+}
+
+/* Logo Link */
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110%; /* Full height of navbar */
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo-img {
+    width: 120px; /* Adjust the width to make the logo smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Nav Icons Styling */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 20px; /* Align to the right side */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Icons */
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.search {
+    margin-left: 20px;
+}
+
+
+/* ===================================
+   3. SIDEBAR & TOOLS
+=================================== */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    padding-top: 50px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    padding: 5px 12px;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background-color: red;
+}
+
+/* Sidebar Social Media Section */
+.social-section {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.social-section h5 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: red;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Search Bar */
+.search-bar {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.4s ease-in-out;
+    z-index: 1100;
+    padding: 10px;
+}
+
+.search-bar.active {
+    top: 0;
+}
+
+.search-input {
+    width: 50%;
+    padding: 12px 45px 12px 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-btn-icon {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+.close-search {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* User Dropdown */
+.user-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 10%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+.user-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-dropdown button:hover {
+    background: red;
+}
+
+/* ===================================
+   4. CHECKOUT PAGE STYLING
+=================================== */
+
+/* General Layout */
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.checkout-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.checkout-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-header p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Checkout Content */
+.checkout-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Order Summary Section */
+.order-summary {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-total {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Billing Info Section */
+.billing-info {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.billing-info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.billing-info label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.billing-info input,
+.billing-info select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.billing-info .payment-button {
+    text-align: center;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .checkout-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-summary,
+    .billing-info {
+        width: 100%;
+    }
+}
+
+/* ===================================
+   5. FOOTER
+=================================== */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-about h5,
+.footer-contact h5,
+.footer-social h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-about p,
+.footer-contact p {
+    font-size: 14px;
+}
+
+.footer-social .social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-social .social-icon:hover {
+    color: red;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===================================
+   6. RESPONSIVE STYLES
+=================================== */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}

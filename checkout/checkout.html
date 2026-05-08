@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fret & Fix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <span class="icon search-btn" id="searchIcon">🔍</span>
+            <a href="../Homepage/Homepage.html" class="logo-link">
+                <img src="./Pictures/logo.png" alt="Fret & Fix Logo" class="logo">
+            </a>
+            <div class="nav-icons">
+                <a href="../cart/cart.html" class="icon" style="text-decoration: none;">🛒</a>
+                <span class="icon user-btn" id="userIcon">👤</span>
+                <span class="icon menu-btn">☰</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="..\Homepage\Homepage.html">Home</a></li>
+            <li><a href="..\Guitar shop\shop.html">Shop</a></li>
+            <li><a href="..\repair\repair.html">Repairs</a></li>
+            <li><a href="..\setup\setup.html">Upgrade</a></li>
+            <li><a href="..\Homepage\Homepage.html#about">About Us</a></li>
+            <li><a href="..\Homepage\Homepage.html#contact">Contact</a></li>
+        </ul>
+
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h5>FOLLOW US</h5>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-music"></i></a>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <input type="text" class="search-input" placeholder="Search">
+        <i class="fas fa-search search-icon"></i>
+        <button class="close-search" id="closeSearch">&times;</button>
+    </div>
+
+    <!-- User Dropdown -->
+    <div id="userDropdown" class="user-dropdown">
+        <button>My Profile</button>
+        <button>Orders</button>
+        <button>Logout</button>
+    </div>
+
+<!-- Main Content (Checkout Page) -->
+<div class="checkout-container">
+    <div class="checkout-header">
+        <h1>Checkout</h1>
+        <p>Review your order and proceed to payment</p>
+    </div>
+
+    <div class="checkout-content">
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="order-item">
+                <p>Template</p>
+                <p>Template</p>
+            </div>
+            <div class="order-item">
+                <p>Template</p>
+                <p>Template</p>
+            </div>
+            <div class="order-total">
+                <p>Total: $Template</p>
+            </div>
+        </div>
+
+        <div class="billing-info">
+            <h3>Billing Information</h3>
+            <form id="checkoutForm" action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+
+                <div class="payment-button">
+                    <button type="submit" class="btn-primary">Proceed to Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fret & Fix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <nav class="navbar">
+        <span class="icon search-btn" id="searchIcon">🔍</span>
+        <a href="../Homepage/Homepage.html" class="logo-link">
+            <img src="./Pictures/logo.png" alt="Fret & Fix Logo" class="logo">
+        </a>
+        <div class="nav-icons">
+            <a href="../cart/cart.html" class="icon" style="text-decoration: none;">🛒</a>
+            <span class="icon user-btn" id="userIcon">👤</span>
+            <span class="icon menu-btn">☰</span>
+        </div>
+    </nav>
+</header>
+
+<!-- User Dropdown (Hidden by Default) -->
+<div class="user-dropdown" id="userDropdown">
+    <a href="../loginregister/login.html"><button class="login-btn">Login</button></a>
+    <a href="../loginregister/register.html"><button class="register-btn">Register</button></a>
+</div>
+
+<!-- Search Dropdown -->
+<div class="search-bar" id="searchBar">
+    <input type="text" class="search-input" placeholder="Search">
+    <i class="fas fa-search search-icon"></i>
+    <button class="close-search" id="closeSearch">&times;</button>
+</div>
+
+<script src="script.js"></script>
+
+
+<!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+    <span class="close-btn">&times;</span>
+    <ul>
+        <li><a href="..\Homepage\Homepage.html">Home</a></li>
+        <li><a href="..\Guitar shop\shop.html">Shop</a></li>
+        <li><a href="..\repair\repair.html">Repairs</a></li>
+        <li><a href="..\setup\setup.html">Upgrade</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Social Media Section -->
+    <div class="social-section">
+        <h5>FOLLOW US</h5>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fas fa-music"></i></a>
+    </div>
+</div>
+
+    </div>
+
+  
+
+    <!-- Gallery Section -->
+    <main class="gallery">
+        <div class="gallery-item">
+            <img src="./Pictures/amp.jpg" alt="New Releases">
+            <div class="overlay">
+                <h2>NEW RELEASES</h2>
+                <a href="..\Guitar shop\shop.html">
+                    <button class="btn">Learn More</button>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="./Pictures/guitartim.jpg" alt="Signature Guitars">
+            <div class="overlay">
+                <h2>SIGNATURE GUITARS</h2>
+                <a href="..\Guitar shop\shop.html">
+                    <button class="btn">Learn More</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="tabs">
+            <span id="newProducts" class="product-tab">New Products</span>
+            <span id="topProducts" class="product-tab">Top Products</span>
+        </div>
+
+        <!-- Product Carousel -->
+        <div class="product-carousel">
+            <button id="left-btn" class="carousel-btn left-btn">&lt;</button>
+            <div class="product-grid">
+                <!-- Row 1 -->
+                <div class="product-card">
+                    <img src="./Pictures/luxar.png" alt="Guitar 1">
+                    <h3>Superstrat</h3>
+                    <p>Luxars S-G37-MAX-S</p>
+                    <p class="price">₱65,000.00</p>
+                    <a href="..\cart\cart.html"><button class="btn red">Add to Cart</button></a>
+                    <a href="..\guitar details\index.html"><button class="btn black">Learn More</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="./Pictures/rjskycaster.png" alt="Guitar 2">
+                    <h3>Stratocaster SSS</h3>
+                    <p>Rj Skycaster</p>
+                    <p class="price">₱45,000.00</p>
+                    <a href="..\cart\cart.html"><button class="btn red">Add to Cart</button></a>
+                    <a href="..\guitar details\index.html"><button class="btn black">Learn More</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="./Pictures/danelectro63.png" alt="Guitar 3">
+                    <h3>Danelectro Electric Guitar</h3>
+                    <p>Danelectro '63</p>
+                    <p class="price">₱14,500.00</p>
+                    <a href="..\cart\cart.html"><button class="btn red">Add to Cart</button></a>
+                    <a href="..\guitar details\index.html"><button class="btn black">Learn More</button></a>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="product-card">
+                    <img src="./Pictures/lespaulcustom.png" alt="Guitar 4">
+                    <h3>Les Paul Custom</h3>
+                    <p>Epiphone LP-100</p>
+                    <p class="price">₱30,000.00</p>
+                    <a href="..\cart\cart.html"><button class="btn red">Add to Cart</button></a>
+                    <a href="..\guitar details\index.html"><button class="btn black">Learn More</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="./Pictures/squierclassicvibe (1).png" alt="Guitar 5">
+                    <h3>Telecaster Electric Guitar</h3>
+                    <p>Squier Classic Vibe</p>
+                    <p class="price">₱38,000.00</p>
+                    <a href="..\cart\cart.html"><button class="btn red">Add to Cart</button></a>
+                    <a href="..\guitar details\index.html"><button class="btn black">Learn More</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="./Pictures/sgstandard.png" alt="Guitar 6">
+                    <h3>SG Standard</h3>
+                    <p>Gibson SG '61 Reissue</p>
+                    <p class="price">₱75,000.00</p>
+                    <a href="..\cart\cart.html"><button class="btn red">Add to Cart</button></a>
+                    <a href="..\guitar details\index.html"><button class="btn black">Learn More</button></a>
+                </div>
+            </div>
+            <button id="right-btn" class="carousel-btn right-btn">&gt;</button>
+        </div>
+    </section>
+    <section class="shop-category">
+        <h2 class="category-title">SHOP BY CATEGORY</h2>
+        <div class="category-grid">
+            <a href="..\Guitar shop\shop.html" class="category-item">  
+                <img src="./Pictures/guitars.jpg" alt="Guitars">
+                <div class="category-overlay">Guitars</div>
+            </a>
+            <a href="../Guitar shop/shop.html" class="category-item">
+                <img src="./Pictures/amplifiers.png" alt="Amplifiers and Effects">
+                <div class="category-overlay">Amplifiers and Effects</div>
+            </a>
+            <a href="../Guitar shop/shop.html" class="category-item">
+                <img src="./Pictures/accessories.png" alt="Accessories">
+                <div class="category-overlay">Accessories</div>
+            </a>
+            <a href="../repair/repair.html" class="category-item">
+                <img src="./Pictures/guitarrepair.png" alt="Repairs and Other Services">
+                <div class="category-overlay">Repairs and Other Services</div>
+            </a>
+        </div>
+    </section>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <img src="./Pictures/logo.png" alt="FretNFix Logo">
+        </div>
+
+<!-- About Section -->
+<div class="footer-about" id="about">
+    <h5>ABOUT</h5>
+    <p>
+        At FretNFix, we're <span class="highlight">more than just a guitar shop</span>—we’re a community of musicians and 
+        <span class="highlight">gear enthusiasts</span> dedicated to helping you find your <span class="highlight">perfect sound</span>. 
+        Whether you're looking for a new guitar, quality accessories, or expert repair services, we've got you covered. 
+        Our passion for music drives us to provide <span class="highlight">top-notch products and services</span>, 
+        ensuring that every player, from beginners to professionals, gets the best experience possible. 
+        <span class="highlight">Join us and keep the music alive!</span>
+    </p>
+</div>
+
+<!-- Contact Section -->
+<div class="footer-contact" id="contact">
+    <h5>CONTACT</h5>
+    <p>
+        <a href="mailto:FretNFix@gmail.com" class="highlight">FretNFix@gmail.com</a><br>
+        <a href="tel:+639161231915" class="highlight">09161231915</a><br>
+        2 Iceland Street, East Fairview Subdivision, Quezon City
+    </p>
+</div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h5>FOLLOW US</h5>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-music"></i></a>
+        </div>
+    </div>
+</footer>
+</html>

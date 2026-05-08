@@ -1,0 +1,528 @@
+/* ===================================
+   1. RESET & BASE STYLES
+=================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #000;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===================================
+   2. NAVBAR / HEADER
+=================================== */
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+/* Logo Link */
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%; /* Full height of navbar */
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    height: 90px;
+    width: auto;
+    display: block;
+}
+
+/* Nav Icons Styling */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Icons */
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.search {
+    margin-left: 20px;
+}
+
+/* ===================================
+   3. SIDEBAR & TOOLS
+=================================== */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    padding-top: 50px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    padding: 5px 12px;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.sidebar ul li a:hover {
+    background-color: red;
+}
+
+/* Sidebar Social Media Section */
+.social-section {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.social-section h5 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: red;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Search Bar */
+.search-bar {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.4s ease-in-out;
+    z-index: 1100;
+    padding: 10px;
+}
+
+.search-bar.active {
+    top: 0;
+}
+
+.search-input {
+    width: 50%;
+    padding: 12px 45px 12px 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-btn-icon {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+.close-search {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* User Dropdown */
+.user-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 10%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+.user-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-dropdown button:hover {
+    background: red;
+}
+
+/* ===================================
+   4. MAIN CONTENT
+=================================== */
+
+/* Gallery */
+.gallery {
+    display: flex;
+    width: 100%;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.red {
+    background-color: red;
+    color: white;
+}
+
+.btn.black {
+    background-color: black;
+    color: white;
+}
+
+/* Product Section */
+.products {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Tabs */
+.tabs {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.active-tab {
+    color: black;
+}
+
+.inactive-tab {
+    color: black;
+}
+
+.tabs span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tabs span:hover {
+    color: red;
+}
+
+.product-tab {
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .product-tab:hover {
+    color: red;
+  }
+  
+  .product-tab.active {
+    color: red;
+  }
+  
+
+
+/* Product Carousel */
+.product-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-btn:hover {
+    color: red;
+    background-color: transparent;
+    border-color: red;
+    cursor: pointer;
+}
+
+
+/* Navigation Buttons */
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.left-btn {
+    position: absolute;
+    left: 0;
+}
+
+.right-btn {
+    position: absolute;
+    right: 0;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    width: 80%;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Shop by Category */
+.shop-category {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.category-title {
+    color: red;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Category Grid */
+.category-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Category Items */
+.category-item {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay */
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.category-item:hover .category-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* ===================================
+   5. FOOTER
+=================================== */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-about h5,
+.footer-contact h5,
+.footer-social h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-about p,
+.footer-contact p {
+    font-size: 14px;
+}
+
+.footer-social .social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-social .social-icon:hover {
+    color: red;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===================================
+   6. RESPONSIVE STYLES
+=================================== */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
+
+/* ===================================
+   
+Contact smooth
+=================================== */
+
+html {
+    scroll-behavior: smooth;
+}
